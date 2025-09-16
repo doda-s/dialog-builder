@@ -1,5 +1,6 @@
 package dialog
 
 type Context struct {
-	nodes []DialogNode
+	Name        string       `yaml:"name"`
+	DialogNodes []DialogNode `yaml:"dialog_nodes"`
 }
