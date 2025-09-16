@@ -66,7 +66,7 @@ func parseToJson(absolutePath string) {
 	if err != nil {
 		panic(err)
 	}
-	jsonData, err := json.MarshalIndent(scopeFile, "", " ")
+	jsonData, err := json.MarshalIndent(scopeFile, "", "\t")
 	if err != nil {
 		panic(err)
 	}
