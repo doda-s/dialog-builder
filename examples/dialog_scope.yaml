@@ -1,31 +1,54 @@
-scope:
-  - context:
-      - name: my-context
-        dialog_nodes:
-          - id: my-first-node
-            title: My title
-            text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquet ipsum non fermentum. Mauris molestie velit et mi dignissim vulputate. Integer sed egestas ipsum. Nam velit tellus, venenatis sit amet ex eget, accumsan pellentesque justo. Pellentesque at lacus metus. Quisque et gravida sapien. Praesent ex nisl, viverra vel interdum.
-            options:
-              - placeholder: Option 1
-                goes: another-node-id
-              - placeholder: Option 2
-                goes: another-node-id-2
-          
-          - id: another-node-id
-            title: My another node
-            text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tincidunt sapien. Curabitur imperdiet laoreet mauris, ut dapibus ante imperdiet ut. Curabitur ac dolor ut nunc pulvinar bibendum. Ut nec cursus justo. Donec sagittis, ex sit amet imperdiet feugiat, velit nisi tempus ante, at cursus orci ex non neque. Vestibulum.
-            options:
-              - placeholder: ...
-                goes: final-dialog
-            
-          - id: another-node-id-2
-            title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum viverra orci vel volutpat. Maecenas sit amet odio ut diam aliquam iaculis. Mauris pulvinar dui in dignissim ultricies. Morbi mi sapien, molestie quis ultricies vitae, ullamcorper ac massa. Suspendisse varius aliquet tincidunt. Integer ultricies quis metus quis fringilla. Phasellus malesuada.
-            options:
-              - placeholder: ...
-                goes: final-dialog
-          
-          - id: final-dialog
-            title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis, nulla at eleifend interdum, mi velit euismod leo, in pretium augue mauris ultrices quam. Cras sollicitudin, odio at vulputate dapibus, enim felis rhoncus ligula, et vehicula nisl enim quis augue. Etiam quis lectus pellentesque, facilisis enim at, dictum erat. Cras.
-            options:
-              - placeholder: ...
-                goes: final-dialog
+context:
+  - name: my-context
+    dialog_nodes:
+      - id: my-first-node
+        title: My title
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquet ipsum non fermentum. Mauris molestie velit et mi dignissim vulputate. Integer sed egestas ipsum. Nam velit tellus, venenatis sit amet ex eget, accumsan pellentesque justo. Pellentesque at lacus metus. Quisque et gravida sapien. Praesent ex nisl, viverra vel interdum.
+        options:
+          - placeholder: Option 1
+            goes: another-node-id
+          - placeholder: Option 2
+            goes: another-node-id-2
+      
+      - id: another-node-id
+        title: My another node
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tincidunt sapien. Curabitur imperdiet laoreet mauris, ut dapibus ante imperdiet ut. Curabitur ac dolor ut nunc pulvinar bibendum. Ut nec cursus justo. Donec sagittis, ex sit amet imperdiet feugiat, velit nisi tempus ante, at cursus orci ex non neque. Vestibulum.
+        options:
+          - placeholder: ...
+            goes: final-dialog
+        
+      - id: another-node-id-2
+        title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum viverra orci vel volutpat. Maecenas sit amet odio ut diam aliquam iaculis. Mauris pulvinar dui in dignissim ultricies. Morbi mi sapien, molestie quis ultricies vitae, ullamcorper ac massa. Suspendisse varius aliquet tincidunt. Integer ultricies quis metus quis fringilla. Phasellus malesuada.
+        options:
+          - placeholder: ...
+            goes: final-dialog
+      
+      - id: final-dialog
+        title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis, nulla at eleifend interdum, mi velit euismod leo, in pretium augue mauris ultrices quam. Cras sollicitudin, odio at vulputate dapibus, enim felis rhoncus ligula, et vehicula nisl enim quis augue. Etiam quis lectus pellentesque, facilisis enim at, dictum erat. Cras.
+  
+  - name: my-context-2
+    dialog_nodes:
+      - id: my-second-node
+        title: My title
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquet ipsum non fermentum. Mauris molestie velit et mi dignissim vulputate. Integer sed egestas ipsum. Nam velit tellus, venenatis sit amet ex eget, accumsan pellentesque justo. Pellentesque at lacus metus. Quisque et gravida sapien. Praesent ex nisl, viverra vel interdum.
+        options:
+          - placeholder: Option 1
+            goes: another-node-id
+          - placeholder: Option 2
+            goes: another-node-id-2
+      
+      - id: another-node-id
+        title: My another node
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut tincidunt sapien. Curabitur imperdiet laoreet mauris, ut dapibus ante imperdiet ut. Curabitur ac dolor ut nunc pulvinar bibendum. Ut nec cursus justo. Donec sagittis, ex sit amet imperdiet feugiat, velit nisi tempus ante, at cursus orci ex non neque. Vestibulum.
+        options:
+          - placeholder: ...
+            goes: final-dialog
+        
+      - id: another-node-id-2
+        title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elementum viverra orci vel volutpat. Maecenas sit amet odio ut diam aliquam iaculis. Mauris pulvinar dui in dignissim ultricies. Morbi mi sapien, molestie quis ultricies vitae, ullamcorper ac massa. Suspendisse varius aliquet tincidunt. Integer ultricies quis metus quis fringilla. Phasellus malesuada.
+        options:
+          - placeholder: ...
+            goes: final-dialog
+      
+      - id: final-dialog
+        title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam venenatis, nulla at eleifend interdum, mi velit euismod leo, in pretium augue mauris ultrices quam. Cras sollicitudin, odio at vulputate dapibus, enim felis rhoncus ligula, et vehicula nisl enim quis augue. Etiam quis lectus pellentesque, facilisis enim at, dictum erat. Cras.
