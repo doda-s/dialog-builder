@@ -61,7 +61,7 @@ func parseToJson(absolutePath string) {
 		panic(err)
 	}
 
-	var scopeFile dialog.ScopeFile
+	var scopeFile dialog.Scope
 	err = yaml.Unmarshal(data, &scopeFile)
 	if err != nil {
 		panic(err)
