@@ -25,10 +25,10 @@ func init() {
 }
 
 func execParseCmd(cmd *cobra.Command, args []string) error {
-	format, err := cmd.Flags().GetString("format")
+	/*format, err := cmd.Flags().GetString("format")
 	if err != nil {
 		return err
-	}
+	}*/
 
 	fileName, err := cmd.Flags().GetString("file")
 	if err != nil {
@@ -45,10 +45,6 @@ func execParseCmd(cmd *cobra.Command, args []string) error {
 	if err != nil {
 		return err
 	}
-
-	fmt.Println("File name: " + fileName)
-	fmt.Println("File absolute path: " + fileAbsolutePath)
-	fmt.Println("File extension: " + format)
 
 	parseToJson(fileAbsolutePath)
 
