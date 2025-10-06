@@ -1,0 +1,66 @@
+{
+	"Context": [
+		{
+			"Name": "dialog-demonstration-1",
+			"StartIn": "demo-greetings",
+			"EndIn": "farewell",
+			"DialogNodes": [
+				{
+					"ID": "demo-greetings",
+					"Title": "The Demonstration",
+					"Text": "Hello, this is a test! I'm The Demonstration. Can I help you?",
+					"Options": [
+						{
+							"Placeholder": "Nice! What can I do?",
+							"Goes": "what-i-can-do"
+						},
+						{
+							"Placeholder": "Shut up bro.",
+							"Goes": "farewell"
+						}
+					]
+				},
+				{
+					"ID": "what-i-can-do",
+					"Title": "The Demonstration",
+					"Text": "Well, you can choose an answer option... And continue the dialogue.",
+					"Options": [
+						{
+							"Placeholder": "Got it.",
+							"Goes": "farewell"
+						}
+					]
+				},
+				{
+					"ID": "farewell",
+					"Title": "The Demonstration",
+					"Text": "If I can help again, please contact me again.",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "farewell"
+						}
+					]
+				}
+			]
+		},
+		{
+			"Name": "sign-demonstration",
+			"StartIn": "message-demonstration",
+			"EndIn": "message-demonstration",
+			"DialogNodes": [
+				{
+					"ID": "message-demonstration",
+					"Title": "",
+					"Text": "Talk to the guy next to you",
+					"Options": [
+						{
+							"Placeholder": "...",
+							"Goes": "message-demonstration"
+						}
+					]
+				}
+			]
+		}
+	]
+}
