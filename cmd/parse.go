@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"dodas/dialogbuilder/internal/core"
 	"dodas/dialogbuilder/internal/dialog"
 	"encoding/json"
 	"fmt"
@@ -25,23 +26,34 @@ func init() {
 }
 
 func execParseCmd(cmd *cobra.Command, args []string) error {
-	/*format, err := cmd.Flags().GetString("format")
-	if err != nil {
-		return err
-	}*/
+	cwd := core.Directory.Cwd
 
-	fileName, err := cmd.Flags().GetString("file")
-	if err != nil {
-		return err
-	}
+	fmt.Println("Cwd: " + cwd)
 
-	cwd, err := os.Getwd()
+	fileRelativePath, err := cmd.Flags().GetString("file")
 	if err != nil {
 		return err
 	}
 
-	fileFullPath := filepath.Join(cwd, fileName)
-	fileAbsolutePath, err := filepath.Abs(fileFullPath)
+	fmt.Println("File relative path: " + fileRelativePath)
+
+	var fileAbsolutePath string
+
+	if strings.Contains(cwd, fileRelativePath) {
+		fileFullPath := filepath.Join(cwd, fileRelativePath)
+		fileAbsolutePath, err = filepath.Abs(fileFullPath)
+		if err != nil {
+			return err
+		}
+		parseToJson(fileAbsolutePath)
+		
+		return nil
+	}
+
+	fileAbsolutePath, err = filepath.Abs(fileRelativePath)
+
+	fmt.Println("Absolute path: " + fileAbsolutePath)
+	
 	if err != nil {
 		return err
 	}
